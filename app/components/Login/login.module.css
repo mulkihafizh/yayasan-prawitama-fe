@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+.Parent {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.Parent .left {
+  max-width: 50%;
+  width: 100%;
+  background-color: black;
+  background-image: url("/Group 18.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 90px;
+  padding: 40px 30px 0 75px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1215px) {
+  .Parent .left {
+    padding: 40px 30px 0 30px;
+  }
+}
+
+.Parent .left .teks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 550px;
+  width: 100%;
+}
+
+.Parent .left .teks .title {
+  font-size: clamp(40px, 2.5vw, 60px);
+  font-weight: 700;
+}
+
+.Parent .left .teks .line {
+  max-width: 210px;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+}
+
+.Parent .left .teks .desc p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+/* Right */
+.Parent .right {
+  max-width: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 130px;
+  height: 100%;
+  padding: 3rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .Parent .left {
+    display: none;
+  }
+
+  .Parent .right {
+    max-width: 100%;
+    width: 100%;
+    background-color: black;
+    background-image: url("/Group 18.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .Parent .right .title h2 {
+    color: #1450a3 !important;
+  }
+
+  .Parent .right .title h1 span {
+    color: #ffffff !important;
+  }
+
+  .Parent .right .title h2 span {
+    color: #ffffff !important;
+  }
+}
+
+.Parent .right .adjustCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 550px;
+  width: 100%;
+  gap: 130px;
+}
+
+.Parent .right .title {
+  max-width: 500px !important;
+  width: 100% !important;
+}
+
+.Parent .right .title h2 {
+  max-width: 500px !important;
+  width: 100% !important;
+  color: #adadad;
+  font-size: clamp(40px, 2.5vw, 60px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Parent .right .title h1 span {
+  color: #ffc93c;
+  font-size: clamp(40px, 2.5vw, 60px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Parent .right .title h2 span {
+  color: #1450a3;
+  font-size: clamp(40px, 2.5vw, 60px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Parent .right form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 64px;
+  max-width: 550px;
+  width: 100%;
+  position: relative;
+}
+
+.Parent .right form .label {
+  position: relative;
+  width: 100%;
+}
+
+.Parent .right form input {
+  width: 100%;
+  height: 75px;
+  border-radius: 20px;
+  background: #ececec;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  padding: 0 0 0 95px;
+}
+
+.Parent .right form .button {
+  max-width: 212px;
+  width: 100%;
+}
+
+.Parent .right form .button button {
+  width: 100%;
+  border-radius: 20px;
+  background: #ffc93c;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 20px 64px;
+}

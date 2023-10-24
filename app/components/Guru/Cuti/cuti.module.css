@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+.Parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 70px;
+  padding: 50px 62px;
+
+  .CardGaji {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 50%;
+    width: 100%;
+    padding: 30px 40px 40px 50px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #0560fd 3%, rgb(255, 255, 255) 3%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    .AdjustCard {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+
+      .head {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+      }
+
+      .periode {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 1rem;
+      }
+    }
+
+    @media only screen and (max-width: 1900px) {
+      .AdjustCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+
+        .periode {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 1rem;
+          margin-top: 1.5rem;
+        }
+      }
+    }
+
+    .adjustButton {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding: 30px 0 30px 0;
+
+      .detail {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 100%;
+        gap: 25px;
+      }
+
+      .detail button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        border-radius: 8px;
+        background-color: #0560fd;
+        padding: 12px 20px;
+        color: white;
+      }
+    }
+
+    @media only screen and (max-width: 1900px) {
+      .adjustButton {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 30px 0 0 0;
+      }
+    }
+  }
+
+  .CardGaji h1 {
+    color: #1057b7;
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .CardGaji p {
+    color: var(--black, #333);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .CardGaji h2 {
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .CardGaji h2 span {
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+
+
+  /* Card Cuti */
+  .CardCuti {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 50px;
+    max-width: 50%;
+    width: 100%;
+
+    .boxes {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 100%;
+      gap: 3rem;
+      color: #000;
+      font-family: "Poppins", sans-serif;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      .box1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 500px !important;
+        width: 100% !important;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        background-image: url("/bg-box1.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px;
+        transition: all ease-in-out 0.2s;
+      }
+
+      .box1:hover{
+        cursor: pointer;
+        scale: 1.05;
+      }
+
+      .box2:hover{
+        cursor: pointer;
+        scale: 1.05;
+      }
+
+      .box2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 500px;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        background-image: url("/bg-box2.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px 45px;
+        transition: all ease-in-out 0.2s;
+      }
+    }
+
+    @media only screen and (max-width: 1900px) {
+      .boxes {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: baseline;
+      gap: 5px;
+    }
+
+    .title h1 {
+      color: rgba(0, 0, 0, 0.78);
+      font-family: "Poppins", sans-serif;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .teks {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 35px;
+    }
+
+    .teks p {
+      color: rgba(0, 0, 0, 0.78);
+      font-family: "Poppins", sans-serif;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding-left: 55px;
+    }
+  }
+}

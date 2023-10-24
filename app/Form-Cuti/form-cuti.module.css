@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px 100px;
+  background: linear-gradient(
+    270deg,
+    #337ccf 18.32%,
+    rgba(51, 124, 207, 0) 100.31%
+  );
+}
+
+.header h1 {
+  max-width: 248px;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.header p {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.header p span {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.adjust {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 36px;
+}
+
+.adjust form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
+}
+
+.adjust .inputs {
+  max-width: 1050px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 100px;
+
+  .label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .label label {
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .label input {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #fff;
+    padding: 25px 35px;
+  }
+
+  .label textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #fff;
+    padding: 25px 35px;
+  }
+
+  .label select {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #fff;
+    padding: 25px 35px;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 310px;
+    width: 100%;
+  }
+
+  .post p {
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .post p:hover {
+    cursor: pointer;
+  }
+
+  .post button {
+    padding: 22px 50px;
+    border-radius: 20px;
+    background: #0560fd;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+.adjust {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 62px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 275px !important;
+  width: 100%;
+  padding: 32px 0 32px 52px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(56, 124, 219, 0.67) 15.6%,
+    rgba(255, 251, 242, 0) 114.4%   
+  );
+  position: relative;
+}
+
+.container .teks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  font-family: "Poppins", sans-serif;
+  max-width: 545px;
+  width: 100%;
+}
+
+.container .teks .title h1 {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.container .teks .desc p {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.container .img {
+  position: relative;
+  width: 530px;
+  height: 380px;
+}
