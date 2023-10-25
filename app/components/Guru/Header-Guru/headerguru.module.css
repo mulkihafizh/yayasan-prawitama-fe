@@ -39,7 +39,7 @@
 .container .teks .title h1 {
   font-family: "Poppins", sans-serif;
   color: #000;
-  font-size: 55px;
+  font-size: clamp(40px, 2.5vw, 55px);
   font-style: normal;
   font-weight: 700;
   line-height: normal;

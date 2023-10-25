@@ -106,7 +106,7 @@
   .CardGaji h1 {
     color: #1057b7;
     font-family: "Poppins", sans-serif;
-    font-size: 40px;
+    font-size: clamp(30px, 2.5vw, 40px);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -139,12 +139,11 @@
     color: #000;
     font-family: "Poppins", sans-serif;
     font-size: 60px;
+    font-size: clamp(40px, 2.5vw, 60px);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
-
-
 
   /* Card Cuti */
   .CardCuti {
@@ -186,12 +185,12 @@
         transition: all ease-in-out 0.2s;
       }
 
-      .box1:hover{
+      .box1:hover {
         cursor: pointer;
         scale: 1.05;
       }
 
-      .box2:hover{
+      .box2:hover {
         cursor: pointer;
         scale: 1.05;
       }

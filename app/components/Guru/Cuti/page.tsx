@@ -15,7 +15,8 @@ export default function page() {
               height={60}
               alt="wallet"
               style={{
-                width: "60px",
+                width: "clamp(50px, 2.5vw, 60px)",
+                height: "clamp(50px, 2.5vw, 60px)"
               }}
             />
             <h1>Gaji Bulan Ini</h1>
