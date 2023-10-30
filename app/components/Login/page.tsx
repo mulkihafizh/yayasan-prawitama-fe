@@ -7,11 +7,12 @@ export default function page() {
     <div className={css.Parent}>
       <div className={css.left}>
         <div className={css.logo}>
-          <Image src={"/logo.png"} width={75} height={75} alt="logo.img" />
+          <Image src={"/logo.png"} width={50} height={50} alt="logo.img" />
         </div>
         <div className={css.teks}>
-          <div className={css.title}>Platform Digital Yayasan Prawitama</div>
+          <div className={css.title}>Platform Digital<br></br>Yayasan Prawitama</div>
           <div className={css.line}></div>
+          
           <div className={css.desc}>
             <p>
               Platform digital khusus di Yayasan Prawitama dirancang untuk
@@ -19,7 +20,7 @@ export default function page() {
               sesuai dengan kebijakan yang berlaku.
             </p>
           </div>
-        </div>
+          </div>
       </div>
       <div className={css.right}>
         <div className={css.adjustCenter}>
@@ -28,7 +29,9 @@ export default function page() {
               <span>Hello,</span>
             </h1>
             <h2>Welcome <span>Back!</span></h2>
+            
           </div>
+          <div className={css.line}></div>
           <form>
             <div className={css.label}>
               <Image
@@ -36,7 +39,7 @@ export default function page() {
                 width={21}
                 height={23}
                 alt="img"
-                style={{ position: "absolute", left: "30px", top: "25px" }}
+                style={{ position: "absolute", left: "20px", top: "15px" }}
               />
               <input
                 type="teks"
@@ -47,15 +50,15 @@ export default function page() {
             <div className={css.label}>
               <Image
                 src={"/input-icon2.png"}
-                width={21}
-                height={23}
+                width={24}
+                height={22}
                 alt="img"
-                style={{ position: "absolute", left: "30px", top: "28px" }}
+                style={{ position: "absolute", left: "20px", top: "22px" }}
               />
               <input
                 type="password"
                 name=""
-                placeholder="Enter your password"
+                placeholder="enter your password"
               />
             </div>
             <div className={css.button}>
