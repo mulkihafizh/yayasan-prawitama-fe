@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./certi.module.css";
 import Image from "next/image";
-import Data from './data/page'
+import Data from '../../../../data/certificate/page'
 import Link from "next/link";
 
 export default function page() {
