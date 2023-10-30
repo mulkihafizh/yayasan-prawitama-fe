@@ -3,13 +3,13 @@
 import React, { useEffect, useState } from "react";
 import css from "./pegawai.module.css";
 import LineChart from "./chart/page";
-import UserData from "../../../../data/pegawai/page";
+import UserData from "@/data/pegawai/page";
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 Chart.register(CategoryScale);
 
 const ChartPage = () => {
-  const [userData, setUserData] = useState({
+  const userData = {
     labels: UserData.map((data) => data.month),
     datasets: [
       {
@@ -27,7 +27,7 @@ const ChartPage = () => {
         backgroundColor: "rgba(217, 157, 0, 0.9)",
       },
     ],
-  });
+  };
   return (
     <div className={css.MainContainer}>
       <div className={css.title}>Jumlah Karyawan</div>
