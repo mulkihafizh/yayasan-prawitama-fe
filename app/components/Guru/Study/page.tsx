@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./study.module.css";
 import Image from "next/image";
-import Data from './data/page'
+import Data from '../../../../data/study/page'
 import Link from "next/link";
 
 export default function page() {

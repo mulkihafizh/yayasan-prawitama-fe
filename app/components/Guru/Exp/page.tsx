@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./exp.module.css";
 import Image from "next/image";
-import Data from './data/page'
+import Data from '../../../../data/exp/page'
 
 export default function page() {
   return (
