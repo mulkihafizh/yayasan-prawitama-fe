@@ -4,9 +4,9 @@ import css from "./bio.module.css";
 import Image from "next/image";
 import Bio from "../DetailBio/page";
 import Experiance from "../Exp/page";
-import Task from "../Task/page"
-import Study from "../Study/page"
-import Certificate from "../Certificate/page"
+import Task from "../Task/page";
+import Study from "../Study/page";
+import Certificate from "../Certificate/page";
 
 import { Fade } from "react-awesome-reveal";
 
@@ -23,7 +23,7 @@ export default function Page() {
       ),
       content: (
         // <Fade  delay={1e3} cascade={tru} damping={1e-1}>
-          <Bio />
+        <Bio />
         // </Fade
       ),
     },
