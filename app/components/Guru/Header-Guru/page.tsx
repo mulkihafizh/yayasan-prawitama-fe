@@ -5,13 +5,13 @@ import Image from "next/image";
 export default function page() {
   return (
     <div className={css.adjust}>
-      <div className={css.container}>
+      <div className={"max-md:!max-h-[300px] " + css.container}>
         <div className={css.teks}>
           <div className={css.title}>
-            <h1>Hai, User</h1>
+            <h1 className="max-[600px]:!text-base ">Hai, User</h1>
           </div>
           <div className={css.desc}>
-            <p>
+            <p className="max-[600px]:!text-xs">
               Selamat datang di Dashboard Guru ! Di sini, Anda dapat melihat
               rincian lengkap mengenai Biodata Pribadi, Payroll, Pengajuan Cuti,
               Penyetujuan Cuti, Unggah Dokumen.
