@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./list.module.css";
 import Image from "next/image";
-import DataPegawai from "./data/page";
+import DataPegawai from "../../../../data/list-pegawai/page";
 
 export default function page() {
   return (

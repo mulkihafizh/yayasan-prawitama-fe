@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import css from "./pegawai.module.css";
 import LineChart from "./chart/page"
-import UserData from "./chart/data/page";
+import UserData from "../../../../data/keuangan/page";
 import Chart from 'chart.js/auto';
 import {CategoryScale} from 'chart.js'; 
 Chart.register(CategoryScale);
