@@ -6,12 +6,12 @@ import DataPegawai from "../../../../data/list-pegawai/page";
 export default function page() {
   return (
     <div className={css.MainContainer}>
-      <div className={css.head}>
+      <div className={"max-md:!grid-cols-1 " + css.head}>
         <div className={css.title}>List Karyawan</div>
-        <div className={css.buttons}>
-          <input type="search" />
-          <button>Search</button>
-          <button>
+        <div className={" md:col-span-2 grid grid-cols-4 " + css.buttons}>
+          <input type="search" className="col-span-2" />
+          <button className="justify-self-end">Search</button>
+          <button className="justify-self-end">
             <Image src={"/export1.png"} width={20} height={20} alt="img" />
             Export
           </button>
@@ -35,22 +35,14 @@ export default function page() {
                 <td>{data.Status}</td>
                 <td>{data.Jabatan}</td>
                 <td>{data.Sisacuti}</td>
-                <td style={{ 
-                    borderRight: "1px solid #e5e5e5"
-                 }}>
-                    {data.tenggat}
-                    <Image
-                    src={'/edit.png'}
-                    width={20}
-                    height={20}
-                    alt="edit"
-                    />
-                    <Image
-                    src={'/doc.png'}
-                    width={20}
-                    height={20}
-                    alt="docs"
-                    />
+                <td
+                  style={{
+                    borderRight: "1px solid #e5e5e5",
+                  }}
+                >
+                  {data.tenggat}
+                  <Image src={"/edit.png"} width={20} height={20} alt="edit" />
+                  <Image src={"/doc.png"} width={20} height={20} alt="docs" />
                 </td>
               </tr>
             </>

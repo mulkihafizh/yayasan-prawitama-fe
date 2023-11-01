@@ -31,19 +31,25 @@ const ChartPage = () => {
   return (
     <div className={css.MainContainer}>
       <div className={css.title}>Jumlah Karyawan</div>
-      <div className={css.jumlahKaryawan}>
-        <div className={css.presentase}>
-          <div className={css.box1}>
+      <div
+        className={"max-lg:!gap-8 max-lg:!grid-cols-1 " + css.jumlahKaryawan}
+      >
+        <div className={"max-md:!gap-3 " + css.presentase}>
+          <div className={"max-md:!gap-2 " + css.box1}>
             <div className={css.number}>
-              <div className={css.h1}>115</div>
+              <div className={"max-md:!text-[16px] " + css.h1}>115</div>
             </div>
-            <div className={css.kt}>Karyawan Tetap</div>
+            <div className={"max-md:!text-[12px] " + css.kt}>
+              Karyawan Tetap
+            </div>
           </div>
-          <div className={css.box2}>
+          <div className={"max-md:!gap-2 " + css.box2}>
             <div className={css.number}>
-              <div className={css.h1}>96</div>
+              <div className={"max-md:!text-[16px] " + css.h1}>96</div>
             </div>
-            <div className={css.kt}>Karyawan Tidak Tetap</div>
+            <div className={"max-md:!text-[12px] " + css.kt}>
+              Karyawan Tidak Tetap
+            </div>
           </div>
         </div>
         <div className={css.chart}>
