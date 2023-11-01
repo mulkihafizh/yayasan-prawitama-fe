@@ -8,13 +8,15 @@ export default function page() {
     <div className={css.MainContainer}>
       <div className={"max-md:!grid-cols-1 " + css.head}>
         <div className={css.title}>List Karyawan</div>
-        <div className={" md:col-span-2 grid grid-cols-4 " + css.buttons}>
-          <input type="search" className="col-span-2" />
-          <button className="justify-self-end">Search</button>
-          <button className="justify-self-end">
-            <Image src={"/export1.png"} width={20} height={20} alt="img" />
-            Export
-          </button>
+        <div className={" md:col-span-2 grid grid-cols-3 " + css.buttons}>
+          <input type="search" className="col-span-2 px-5" />
+          <div className="button-group grid grid-cols-2 gap-4">
+            <button className="justify-self-end">Search</button>
+            <button className="justify-self-end flex !items-center justify-center">
+              <Image src={"/export1.png"} width={20} height={20} alt="img" />
+              Export
+            </button>
+          </div>
         </div>
       </div>
       <table>
