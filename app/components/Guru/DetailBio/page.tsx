@@ -1,7 +1,6 @@
 import React from "react";
 import css from "./bio.module.css";
 import Image from "next/image";
-import { Fade } from "react-awesome-reveal";
 // import Zoom from 'react-reveal/Zoom';
 
 export default function page({ data }: any) {
@@ -43,7 +42,7 @@ export default function page({ data }: any) {
         <div className={css.detail}>
           <p>
             <span>Nama Lengkap</span>{" "}
-            {data.name != null ? (
+            {data != null ? (
               data.name
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -53,7 +52,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>Jenis Kelamin</span>{" "}
-            {data.gender != null ? (
+            {data != null ? (
               data.gender
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -63,7 +62,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>NIP</span>{" "}
-            {data.id_pegawai != null ? (
+            {data != null ? (
               data.id_pegawai
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -73,7 +72,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>NIK</span>{" "}
-            {data.nik != null ? (
+            {data != null ? (
               data.nik
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -83,7 +82,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>NUPTK</span>{" "}
-            {data.reg_number != null ? (
+            {data != null ? (
               data.reg_number
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -93,7 +92,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>Tempat Lahir</span>{" "}
-            {data.birth_place != null ? (
+            {data != null ? (
               data.birth_place
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -103,7 +102,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>Tanggal Lahir</span>{" "}
-            {data.birth_date != null ? (
+            {data != null ? (
               new Date(data.birth_date).toLocaleString("id-ID", {
                 weekday: "long",
                 year: "numeric",
@@ -118,7 +117,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>Agama</span>{" "}
-            {data.religion != null ? (
+            {data != null ? (
               data.religion
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -128,7 +127,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>No HP</span>{" "}
-            {data.phone_number != null ? (
+            {data != null ? (
               data.phone_number
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
