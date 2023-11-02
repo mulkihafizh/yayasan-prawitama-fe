@@ -2,6 +2,7 @@ import React from "react";
 import css from "./listgaji.module.css";
 import Image from "next/image";
 import DataGaji from "../../../../data/gaji/page";
+import Link from "next/link";
 
 export default function page() {
   return (
@@ -47,7 +48,9 @@ export default function page() {
                         backgroundColor: "#337ccf",
                       }}
                     >
+                      <Link href={'/Detail-Gaji'}>
                       Detail
+                      </Link>
                     </button>
                   </td>
                 </tr>

@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+.Parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 42px 100px;
+  }
+
+  .title h1 {
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 125px;
+
+    .print {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      padding-bottom: 20px;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 39px 32px;
+      margin-bottom: 74px;
+      width: 100%;
+      background-color: white;
+
+      .line {
+        width: 100%;
+
+        .rectangle {
+          width: 100%;
+          height: 3px;
+          background: linear-gradient(90deg, #387cdb 4%, #e5e5e5 4%);
+        }
+      }
+
+      .line p {
+        padding-left: 8px;
+        padding-bottom: 10px;
+      }
+
+      .desc {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .container {
+          display: flex;
+          flex-direction: row;
+          gap: 48px;
+          border-bottom: 3px solid #E5E5E5;
+          padding: 20px 0 20px 0;
+          width: 100%;
+
+          .list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 200px;
+            width: 100% ;
+          }
+
+          .output {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+          }
+        }
+      }
+    }
+  }
+}
