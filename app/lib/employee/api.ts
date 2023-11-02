@@ -1,4 +1,4 @@
-const API_URL = process.env.NEX_PUBLIC_API_ENDPOINT as string;
+const API_URL = process.env.NEXT_PUBLIC_API_ENDPOINT as string;
 const path = "employee";
 
 export const getEmployees = async () => {
