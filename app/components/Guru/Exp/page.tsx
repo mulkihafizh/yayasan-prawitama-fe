@@ -18,7 +18,7 @@ export default function page() {
           {Data.map((data, index) => (
             <>
           <tr>
-            <th>Instansi/Perusahaan</th>
+            <th>Instansi</th>
             <th>Posisi</th>
             <th>Tanggal Mulai</th>
             <th>Tanggal Selesai</th>
@@ -32,8 +32,8 @@ export default function page() {
             <td>
               <Image
               src={'/edit2.png'}
-              width={32}
-              height={30}
+              width={20}
+              height={10}
               alt="edit"
               />
             </td>
