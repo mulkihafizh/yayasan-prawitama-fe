@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./certi.module.css";
 import Image from "next/image";
-import Data from './data/page'
+import Data from '../../../../data/certificate/page'
 import Link from "next/link";
 
 export default function page() {
@@ -35,8 +35,8 @@ export default function page() {
             <td>
               <Image
               src={'/edit2.png'}
-              width={32}
-              height={30}
+              width={20}
+              height={10}
               alt="edit"
               />
             </td>

@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 62px;
+  margin: 0px 10%;
 }
 
 .container {
@@ -13,16 +13,16 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-height: 275px !important;
+  max-height: 200px;
   width: 100%;
-  padding: 32px 0 32px 52px;
+  padding: 32px 0 32px 10%;
   border-radius: 30px;
+  position: relative;
   background-image: linear-gradient(
     90deg,
     rgba(56, 124, 219, 0.67) 15.6%,
-    rgba(255, 251, 242, 0) 114.4%   
+    rgba(255, 251, 242, 0) 114.4%
   );
-  position: relative;
 }
 
 .container .teks {
@@ -39,7 +39,7 @@
 .container .teks .title h1 {
   font-family: "Poppins", sans-serif;
   color: #000;
-  font-size: clamp(40px, 2.5vw, 55px);
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -48,7 +48,7 @@
 .container .teks .desc p {
   color: #000;
   font-family: "Inter", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -56,6 +56,6 @@
 
 .container .img {
   position: relative;
-  width: 530px;
-  height: 380px;
+  width: 380px;
+  height: 250px;
 }

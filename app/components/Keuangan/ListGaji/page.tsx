@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./listgaji.module.css";
 import Image from "next/image";
-import DataGaji from "./Data/page";
+import DataGaji from "../../../../data/gaji/page";
 import Link from "next/link";
 
 export default function page() {
