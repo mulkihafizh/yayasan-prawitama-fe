@@ -10,7 +10,7 @@ import Certificate from "../Certificate/page";
 
 import { Fade } from "react-awesome-reveal";
 
-export default function Page() {
+export default function Page({ data }: any) {
   const [currentSection, setCurrentSection] = useState(1);
   const sections = [
     {
@@ -23,7 +23,7 @@ export default function Page() {
       ),
       content: (
         // <Fade  delay={1e3} cascade={tru} damping={1e-1}>
-        <Bio />
+        <Bio data={data}/>
         // </Fade
       ),
     },

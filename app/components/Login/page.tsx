@@ -1,8 +1,35 @@
+"use client";
 import React from "react";
+import { useState } from "react";
 import css from "./login.module.css";
 import Image from "next/image";
 
 export default function page() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const login = async () => {
+    await fetch("/api/user/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+    }).then((res) => {
+      if (res.ok) {
+        res.json().then((data) => {
+          localStorage.setItem("token", data.token);
+          if (data.user.role == "employee_admin") {
+            window.location.href = "/Dashboard-Kepegawaian";
+          } else if (data.user.role == "payroll_admin") {
+            window.location.href = "/Dashboard-Keuangan";
+          } else {
+            window.location.href = "/Dashboard-Guru";
+          }
+        });
+      } else {
+        alert("Email atau Password Salah");
+      }
+    });
+  };
+
   return (
     <div className={css.Parent}>
       <div className={css.left}>
@@ -10,9 +37,11 @@ export default function page() {
           <Image src={"/logo.png"} width={50} height={50} alt="logo.img" />
         </div>
         <div className={css.teks}>
-          <div className={css.title}>Platform Digital<br></br>Yayasan Prawitama</div>
+          <div className={css.title}>
+            Platform Digital<br></br>Yayasan Prawitama
+          </div>
           <div className={css.line}></div>
-          
+
           <div className={css.desc}>
             <p>
               Platform digital khusus di Yayasan Prawitama dirancang untuk
@@ -20,7 +49,7 @@ export default function page() {
               sesuai dengan kebijakan yang berlaku.
             </p>
           </div>
-          </div>
+        </div>
       </div>
       <div className={css.right}>
         <div className={css.adjustCenter}>
@@ -28,11 +57,12 @@ export default function page() {
             <h1>
               <span>Hello,</span>
             </h1>
-            <h2>Welcome <span>Back!</span></h2>
-            
+            <h2>
+              Welcome <span>Back!</span>
+            </h2>
           </div>
           <div className={css.line}></div>
-          <form>
+          <div className={css.form}>
             <div className={css.label}>
               <Image
                 src={"/input-icon.png"}
@@ -42,7 +72,8 @@ export default function page() {
                 style={{ position: "absolute", left: "20px", top: "15px" }}
               />
               <input
-                type="teks"
+                onChange={(e) => setEmail(e.target.value)}
+                type="text"
                 name="email"
                 placeholder="Enter your username or email"
               />
@@ -56,15 +87,18 @@ export default function page() {
                 style={{ position: "absolute", left: "20px", top: "22px" }}
               />
               <input
+                onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 name=""
                 placeholder="enter your password"
               />
             </div>
             <div className={css.button}>
-                <button type="submit">Login</button>
+              <button type="submit" onClick={login}>
+                Login
+              </button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>

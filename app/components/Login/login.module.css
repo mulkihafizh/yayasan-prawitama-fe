@@ -158,7 +158,7 @@
   line-height: normal;
 }
 
-.Parent .right form {
+.Parent .right .form {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -169,12 +169,12 @@
   position: relative;
 }
 
-.Parent .right form .label {
+.Parent .right .form .label {
   position: relative;
   width: 100%;
 }
 
-.Parent .right form input {
+.Parent .right .form input {
   width: 100%;
   max-width: 100%;
   height: 60px;
@@ -183,13 +183,13 @@
   padding: 0 0 0 55px;
 }
 
-.Parent .right form .button {
+.Parent .right .form .button {
   padding-top: 15px;
   width: 20%;
   max-width: 30%;
 }
 
-.Parent .right form .button button {
+.Parent .right .form .button button {
   width: 100%;
   max-width: 100%;
   border-radius: 15px;

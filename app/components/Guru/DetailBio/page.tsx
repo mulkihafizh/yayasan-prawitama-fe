@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
 // import Zoom from 'react-reveal/Zoom';
 
-export default function page() {
+export default function page({ data }: any) {
   return (
     <div className={css.DetailContainer}>
       <div className={css.title}>
@@ -42,31 +42,99 @@ export default function page() {
         </div>
         <div className={css.detail}>
           <p>
-            <span>Nama Lengkap</span> User
+            <span>Nama Lengkap</span>{" "}
+            {data.name != null ? (
+              data.name
+            ) : (
+              <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
+                Name Placeholder
+              </span>
+            )}
           </p>
           <p>
-            <span>Jenis Kelamin</span> Laki
+            <span>Jenis Kelamin</span>{" "}
+            {data.gender != null ? (
+              data.gender
+            ) : (
+              <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
+                Name Placeholder
+              </span>
+            )}
           </p>
           <p>
-            <span>NIP</span> 12108755
+            <span>NIP</span>{" "}
+            {data.id_pegawai != null ? (
+              data.id_pegawai
+            ) : (
+              <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
+                Name Placeholder
+              </span>
+            )}
           </p>
           <p>
-            <span>NIK</span> 12108755
+            <span>NIK</span>{" "}
+            {data.nik != null ? (
+              data.nik
+            ) : (
+              <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
+                Name Placeholder
+              </span>
+            )}
           </p>
           <p>
-            <span>NUPTK</span> 12108755
+            <span>NUPTK</span>{" "}
+            {data.reg_number != null ? (
+              data.reg_number
+            ) : (
+              <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
+                Name Placeholder
+              </span>
+            )}
           </p>
           <p>
-            <span>Tempat Lahir</span> Belitung
+            <span>Tempat Lahir</span>{" "}
+            {data.birth_place != null ? (
+              data.birth_place
+            ) : (
+              <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
+                Name Placeholder
+              </span>
+            )}
           </p>
           <p>
-            <span>Tanggal Lahir</span> 9 September 2006
+            <span>Tanggal Lahir</span>{" "}
+            {data.birth_date != null ? (
+              new Date(data.birth_date).toLocaleString("id-ID", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
+            ) : (
+              <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
+                Name Placeholder
+              </span>
+            )}
           </p>
           <p>
-            <span>Agama</span> Kristen Protestan
+            <span>Agama</span>{" "}
+            {data.religion != null ? (
+              data.religion
+            ) : (
+              <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
+                Name Placeholder
+              </span>
+            )}
           </p>
           <p>
-            <span>No HP</span>
+            <span>No HP</span>{" "}
+            {data.phone_number != null ? (
+              data.phone_number
+            ) : (
+              <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
+                Name Placeholder
+              </span>
+            )}
           </p>
         </div>
       </div>
