@@ -10,6 +10,9 @@ export default function page() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    if (localStorage.getItem("token") == null) {
+      window.location.href = "/";
+    }
     fetch("/api/user/employee", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),

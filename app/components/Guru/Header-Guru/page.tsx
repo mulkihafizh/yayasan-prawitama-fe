@@ -10,7 +10,7 @@ export default function page({ data }: any) {
           <div className={css.title}>
             <h1 className="max-[600px]:!text-base ">
               Hai,
-              {data.name != null ? (
+              {data != null ? (
                 data.name
               ) : (
                 <span className="min-w-[60px]  text-2xl animate-colorChange text-transparent  ml-2 rounded-2xl ">
