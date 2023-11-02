@@ -59,6 +59,7 @@ export default function page() {
           </div>
           <div className={css.inputs}>
             <div className={css.label}>
+              <div className={css.dmy}>
               <label>Tanggal</label>
               <input
                 style={{
@@ -66,6 +67,7 @@ export default function page() {
                 }}
                 type="date"
               />
+              </div>
             </div>
             <div className={css.post}>
               <p>Cancel</p>
