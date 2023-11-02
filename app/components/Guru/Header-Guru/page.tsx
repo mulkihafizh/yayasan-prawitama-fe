@@ -2,13 +2,22 @@ import React from "react";
 import css from "./headerguru.module.css";
 import Image from "next/image";
 
-export default function page() {
+export default function page({ data }: any) {
   return (
     <div className={css.adjust}>
       <div className={"max-md:!max-h-[300px] " + css.container}>
         <div className={css.teks}>
           <div className={css.title}>
-            <h1 className="max-[600px]:!text-base ">Hai, User</h1>
+            <h1 className="max-[600px]:!text-base ">
+              Hai,
+              {data.name != null ? (
+                data.name
+              ) : (
+                <span className="min-w-[60px]  text-2xl animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                  Name Placeholder
+                </span>
+              )}
+            </h1>
           </div>
           <div className={css.desc}>
             <p className="max-[600px]:!text-xs">
