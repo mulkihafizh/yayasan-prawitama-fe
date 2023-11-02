@@ -5,16 +5,16 @@ import css from "./header1.module.css";
 export default function page() {
   return (
     <div className={css.adjust}>
-      <div className={css.container}>
+      <div className={"max-md:!max-h-[300px] " + css.container}>
         <div className={css.teks}>
           <div className={css.title}>
-            <h1>Keuangan</h1>
+            <h1 className="max-[600px]:!text-base ">Keuangan</h1>
           </div>
           <div className={css.desc}>
-            <p>
-              Selamat datang di laporan Keuangan ! Di sini, Anda dapat melihat
-              rincian lengkap mengenai Pendapatan, Tunjangan, dan Benefit
-              karyawan.
+            <p className="max-[600px]:!text-xs">
+            Selamat datang di laporan Keuangan ! Di sini, 
+            Anda dapat melihat rincian lengkap mengenai Pendapatan, 
+            Tunjangan, dan Benefit karyawan.
             </p>
           </div>
         </div>
@@ -27,7 +27,7 @@ export default function page() {
             style={{
               position: "absolute",
               left: 0,
-              bottom: "5%",
+              bottom: "3%",
             }}
           />
         </div>

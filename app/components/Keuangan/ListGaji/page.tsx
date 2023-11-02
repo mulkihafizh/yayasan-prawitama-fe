@@ -13,9 +13,9 @@ export default function page() {
           <div className={css.page}>
             <p>
               Records per page: <span>100</span>
-              <Image src={"/sortdown.png"} width={15} height={15} alt="down" />
+              <Image src={"/sortdown.png"} width={15} height={15}  style={{paddingBottom: '10px'}}alt="down" />
             </p>
-            <Image src={"/print.png"} width={47} height={47} alt="print" />
+            <Image src={"/print.png"} width={35} height={35}    style={{paddingTop: '10px'}}alt="print" />
           </div>
         </div>
         <table>
@@ -26,6 +26,7 @@ export default function page() {
               <th>Status</th>
               <th>Jabatan</th>
               <th>Gaji</th>
+              <th>Action</th>
             </tr>
             {DataGaji.map((data, index) => (
               <>

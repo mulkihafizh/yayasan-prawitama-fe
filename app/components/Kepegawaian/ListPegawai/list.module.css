@@ -79,7 +79,7 @@
   font-weight: 600;
   line-height: normal;
   text-align: center;
-  padding: 40px 0 110px 0;
+  padding: 40px 0 0px 0;
   border-top: 1px solid #e5e5e5;
   width: 100%;
 }
@@ -99,4 +99,7 @@
   justify-content: center;
   align-items: baseline;
   gap: 2rem;
+  padding-bottom: 10px;
 }
+
+

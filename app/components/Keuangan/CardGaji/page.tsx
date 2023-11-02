@@ -6,7 +6,7 @@ export default function page() {
   return (
     <div className={css.container}>
       <div className={css.title}>
-        <Image className="img" src={"/anoun.png"} width={55} height={55} alt="anoun" />
+        <Image className="img" src={"/anoun.png"} width={55} height={55} padding-top={30} alt="anoun" />
         <h1>Announcement</h1>
       </div>
       <div className={css.CardParent}>

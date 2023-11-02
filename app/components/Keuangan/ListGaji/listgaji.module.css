@@ -67,8 +67,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
 }
 
 .Parent table tbody {
@@ -92,10 +92,18 @@
   font-weight: 600;
   line-height: normal;
   text-align: center;
-  padding: 40px 0 110px 0;
+  padding: 40px 0 0px 0;
   border-top: 1px solid #e5e5e5;
   width: 100%;
 }
+
+
+
+.Parent table tr th:first-child {
+  align-items: left;
+  justify-content: left;
+}
+
 
 .Parent table tr td {
   width: 100%;
@@ -107,7 +115,7 @@
   line-height: normal;
   display: flex !important;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: baseline;
   gap: 2rem;
 }

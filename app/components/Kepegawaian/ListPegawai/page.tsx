@@ -13,7 +13,7 @@ export default function page() {
           <div className="button-group grid grid-cols-2 gap-4">
             <button className="justify-self-end">Search</button>
             <button className="justify-self-end flex !items-center justify-center">
-              <Image src={"/export1.png"} width={20} height={20} alt="img" />
+              <Image src={"/export1.png"} width={50} height={50} alt="img" />
               Export
             </button>
           </div>
@@ -28,6 +28,8 @@ export default function page() {
             <th>Jabatan</th>
             <th>Sisa Cuti</th>
             <th>Tenggat Kontrak</th>
+            <th>Action</th>
+            
           </tr>
           {DataPegawai.map((data, index) => (
             <>
@@ -37,12 +39,13 @@ export default function page() {
                 <td>{data.Status}</td>
                 <td>{data.Jabatan}</td>
                 <td>{data.Sisacuti}</td>
+                <td>{data.tenggat}</td>
                 <td
                   style={{
                     borderRight: "1px solid #e5e5e5",
                   }}
                 >
-                  {data.tenggat}
+                  
                   <Image src={"/edit.png"} width={20} height={20} alt="edit" />
                   <Image src={"/doc.png"} width={20} height={20} alt="docs" />
                 </td>

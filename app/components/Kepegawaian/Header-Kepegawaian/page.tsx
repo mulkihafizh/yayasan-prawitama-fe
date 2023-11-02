@@ -27,7 +27,7 @@ export default function page() {
             style={{
               position: "absolute",
               left: 0,
-              bottom: "5%",
+              bottom: "2%",
             }}
           />
         </div>

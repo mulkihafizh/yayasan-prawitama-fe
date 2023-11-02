@@ -15,7 +15,7 @@
   align-items: center;
   max-height: 200px;
   width: 100%;
-  padding: 32px 0 32px 10%;
+  
   border-radius: 30px;
   position: relative;
   background-image: linear-gradient(
@@ -34,6 +34,7 @@
   font-family: "Poppins", sans-serif;
   max-width: 545px;
   width: 100%;
+  padding-left: 40px;
 }
 
 .container .teks .title h1 {
@@ -52,10 +53,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-align: justify;
+  padding-right:20px;
 }
 
 .container .img {
   position: relative;
   width: 380px;
   height: 250px;
+  margin-top: 15px;
 }
