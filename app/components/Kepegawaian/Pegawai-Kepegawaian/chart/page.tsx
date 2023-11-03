@@ -11,14 +11,14 @@ function LineChart({ chartData }: any) {
     datasets: [
       {
         label: "Pegawai Tetap",
-        data: chartData.map((e: any) => e.employment_type == "Permanent"),
+        data: chartData?.map((e: any) => e.employment_type == "Permanent"),
         tension: 0.3,
         fill: true,
         backgroundColor: "rgba(252, 214, 114, 0.8)",
       },
       {
         label: "Pegawai Tidak Tetap",
-        data: chartData.map((e: any) => e.employment_type == "Contract"),
+        data: chartData?.map((e: any) => e.employment_type == "Contract"),
         tension: 0.3,
         fill: true,
         backgroundColor: "rgba(217, 157, 0, 0.9)",
