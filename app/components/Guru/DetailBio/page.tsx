@@ -42,7 +42,7 @@ export default function page({ data }: any) {
         <div className={css.detail}>
           <p>
             <span>Nama Lengkap</span>{" "}
-            {data != null ? (
+            {Object.keys(data).length > 0 ? (
               data.name
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -52,7 +52,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>Jenis Kelamin</span>{" "}
-            {data != null ? (
+            {Object.keys(data).length > 0 ? (
               data.gender
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -62,7 +62,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>NIP</span>{" "}
-            {data != null ? (
+            {Object.keys(data).length > 0 ? (
               data.id_pegawai
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -72,7 +72,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>NIK</span>{" "}
-            {data != null ? (
+            {Object.keys(data).length > 0 ? (
               data.nik
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -82,7 +82,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>NUPTK</span>{" "}
-            {data != null ? (
+            {Object.keys(data).length > 0 ? (
               data.reg_number
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -92,7 +92,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>Tempat Lahir</span>{" "}
-            {data != null ? (
+            {Object.keys(data).length > 0 ? (
               data.birth_place
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -102,7 +102,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>Tanggal Lahir</span>{" "}
-            {data != null ? (
+            {Object.keys(data).length > 0 ? (
               new Date(data.birth_date).toLocaleString("id-ID", {
                 weekday: "long",
                 year: "numeric",
@@ -117,7 +117,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>Agama</span>{" "}
-            {data != null ? (
+            {Object.keys(data).length > 0 ? (
               data.religion
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
@@ -127,7 +127,7 @@ export default function page({ data }: any) {
           </p>
           <p>
             <span>No HP</span>{" "}
-            {data != null ? (
+            {Object.keys(data).length > 0 ? (
               data.phone_number
             ) : (
               <span className="min-w-[60px]  text-2xl animate-colorChange !text-transparent  ml-1 rounded-2xl ">
