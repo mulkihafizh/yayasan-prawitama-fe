@@ -3,7 +3,7 @@ import css from "./cuti.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function page() {
+export default function page({ data }: any) {
   return (
     <div className={"max-lg:!gap-8 max-lg:!grid-cols-1 " + css.Parent}>
       <div className={"max-lg:!gap-8 " + css.CardGaji}>
@@ -56,7 +56,19 @@ export default function page() {
             <h1>Announcement</h1>
           </div>
           <div className={css.teks}>
-            <p>Sisa hari cuti anda adalah 2 hari</p>
+            <p>
+              Sisa hari cuti anda adalah{" "}
+              {data != null &&
+              data != undefined &&
+              Object.keys(data).length > 0 ? (
+                data.days_off
+              ) : (
+                <span className="min-w-[60px]  text-2xl animate-colorChange text-transparent  rounded-2xl ">
+                  Name
+                </span>
+              )}{" "}
+              hari
+            </p>
             <p>Anda memiliki pemberitahuan terkait penyetujuan cuti</p>
           </div>
         </div>

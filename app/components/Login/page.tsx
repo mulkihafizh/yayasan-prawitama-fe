@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import css from "./login.module.css";
 import Image from "next/image";
+import { setCookie } from "cookies-next";
 
 export default function page() {
   const [email, setEmail] = useState("");
@@ -15,7 +16,14 @@ export default function page() {
     }).then((res) => {
       if (res.ok) {
         res.json().then((data) => {
-          localStorage.setItem("token", data.token);
+          setCookie("token", data.token, {
+            maxAge: 30 * 24 * 60 * 60,
+            path: "/",
+          });
+          setCookie("role", data.user.role, {
+            maxAge: 30 * 24 * 60 * 60,
+            path: "/",
+          });
           if (data.user.role == "employee_admin") {
             window.location.href = "/Dashboard-Kepegawaian";
           } else if (data.user.role == "payroll_admin") {
