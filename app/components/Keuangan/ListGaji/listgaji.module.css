@@ -115,7 +115,7 @@
   line-height: normal;
   display: flex !important;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
   align-items: baseline;
   gap: 2rem;
 }

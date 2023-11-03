@@ -13,9 +13,21 @@ export default function page() {
           <div className={css.page}>
             <p>
               Records per page: <span>100</span>
-              <Image src={"/sortdown.png"} width={15} height={15}  style={{paddingBottom: '10px'}}alt="down" />
+              <Image
+                src={"/sortdown.png"}
+                width={15}
+                height={15}
+                style={{ paddingBottom: "10px" }}
+                alt="down"
+              />
             </p>
-            <Image src={"/print.png"} width={35} height={35}    style={{paddingTop: '10px'}}alt="print" />
+            <Image
+              src={"/print.png"}
+              width={35}
+              height={35}
+              style={{ paddingTop: "10px" }}
+              alt="print"
+            />
           </div>
         </div>
         <table>
@@ -35,8 +47,8 @@ export default function page() {
                   <td>{data.Nama}</td>
                   <td>{data.Status}</td>
                   <td>{data.Jabatan}</td>
+                  <td>{data.Gaji}</td>
                   <td>
-                    {data.Gaji}
                     <button
                       style={{
                         backgroundColor: "#FFCA56",
@@ -49,9 +61,7 @@ export default function page() {
                         backgroundColor: "#337ccf",
                       }}
                     >
-                      <Link href={'/Detail-Gaji'}>
-                      Detail
-                      </Link>
+                      <Link href={"/Detail-Gaji"}>Detail</Link>
                     </button>
                   </td>
                 </tr>
