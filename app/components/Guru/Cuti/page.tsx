@@ -58,7 +58,9 @@ export default function page({ data }: any) {
           <div className={css.teks}>
             <p>
               Sisa hari cuti anda adalah{" "}
-              {Object.keys(data).length > 0 ? (
+              {data != null &&
+              data != undefined &&
+              Object.keys(data).length > 0 ? (
                 data.days_off
               ) : (
                 <span className="min-w-[60px]  text-2xl animate-colorChange text-transparent  rounded-2xl ">
