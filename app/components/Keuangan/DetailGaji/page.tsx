@@ -91,7 +91,7 @@ export default function page() {
               </div>
             </div>
             <div className={css.container}>
-              <div className={css.list}>
+              <div className={css.lists}>
                 <strong>Detail Potongan (-)</strong>
                 <strong>BPJS</strong>
                 <p>Ketenagakerjaan</p>
@@ -126,7 +126,9 @@ export default function page() {
                 <p>Rp 1.200.000</p>
               </div>
             </div>
-            <div className={css.container}>
+            <div style={{ 
+              border: 'none !important'
+             }} className={css.container}>
               <div className={css.list}>
                 <strong>Total</strong>
               </div>
@@ -134,6 +136,7 @@ export default function page() {
                 <p>Rp 24.000.000</p>
               </div>
             </div>
+            <button>Back</button>
           </div>
         </div>
       </div>

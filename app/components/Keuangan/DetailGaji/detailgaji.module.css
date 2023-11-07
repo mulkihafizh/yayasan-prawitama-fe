@@ -76,7 +76,7 @@
           display: flex;
           flex-direction: row;
           gap: 48px;
-          border-bottom: 3px solid #E5E5E5;
+          border-bottom: 3px solid #e5e5e5;
           padding: 20px 0 20px 0;
           width: 100%;
 
@@ -85,7 +85,23 @@
             flex-direction: column;
             gap: 15px;
             max-width: 200px;
-            width: 100% ;
+            width: 100%;
+          }
+
+          .lists {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 200px;
+            width: 100%;
+          }
+
+          .lists p {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-left: 1.5rem;
+            width: 100%;
           }
 
           .output {
@@ -94,6 +110,23 @@
             gap: 15px;
           }
         }
+      }
+
+      .desc button {
+        padding-top: 1rem;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        color: #333;
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .desc button:hover {
+        cursor: pointer;
       }
     }
   }
