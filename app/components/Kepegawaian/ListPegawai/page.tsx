@@ -1,9 +1,8 @@
 import React from "react";
 import css from "./list.module.css";
 import Image from "next/image";
-import DataPegawai from "../../../../data/list-pegawai/page";
 
-export default function page() {
+export default function page({ Users }: any) {
   return (
     <div className={css.MainContainer}>
       <div className={"max-md:!grid-cols-1 " + css.head}>
@@ -29,29 +28,121 @@ export default function page() {
             <th>Sisa Cuti</th>
             <th>Tenggat Kontrak</th>
             <th>Action</th>
-            
           </tr>
-          {DataPegawai.map((data, index) => (
+          {Users != null &&
+          Users != undefined &&
+          Object.keys(Users).length > 0 ? (
+            Users.map((user: any) => {
+              return (
+                <tr>
+                  <td>{user.id_pegawai}</td>
+                  <td>{user.name}</td>
+                  <td>{user.department.name}</td>
+                  <td>{user.department.description}</td>
+                  <td>{user.days_off}</td>
+                  <td>{user.tenggat || "-"}</td>
+                  <td
+                    style={{
+                      borderRight: "1px solid #e5e5e5",
+                    }}
+                  >
+                    <Image
+                      src={"/edit.png"}
+                      width={20}
+                      height={20}
+                      alt="edit"
+                    />
+                    <Image src={"/doc.png"} width={20} height={20} alt="docs" />
+                  </td>
+                </tr>
+              );
+            })
+          ) : (
             <>
               <tr>
-                <td>{data.nip}</td>
-                <td>{data.Nama}</td>
-                <td>{data.Status}</td>
-                <td>{data.Jabatan}</td>
-                <td>{data.Sisacuti}</td>
-                <td>{data.tenggat}</td>
+                <td>
+                  <span className="min-w-[60px]  text-sm animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                    Name Placeholder
+                  </span>
+                </td>
+                <td>
+                  <span className="min-w-[60px]  text-sm animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                    Name Placeholder
+                  </span>
+                </td>
+                <td>
+                  <span className="min-w-[60px]  text-sm animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                    Name Placeholder
+                  </span>
+                </td>
+                <td>
+                  <span className="min-w-[60px]  text-sm animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                    Name Placeholder
+                  </span>
+                </td>
+                <td>
+                  <span className="min-w-[60px]  text-sm animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                    Name Placeholder
+                  </span>
+                </td>
+                <td>
+                  <span className="min-w-[60px]  text-sm animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                    Name Placeholder
+                  </span>
+                </td>
+
                 <td
                   style={{
                     borderRight: "1px solid #e5e5e5",
                   }}
                 >
-                  
+                  <Image src={"/edit.png"} width={20} height={20} alt="edit" />
+                  <Image src={"/doc.png"} width={20} height={20} alt="docs" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span className="min-w-[60px]  text-sm animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                    Name Placeholder
+                  </span>
+                </td>
+                <td>
+                  <span className="min-w-[60px]  text-sm animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                    Name Placeholder
+                  </span>
+                </td>
+                <td>
+                  <span className="min-w-[60px]  text-sm animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                    Name Placeholder
+                  </span>
+                </td>
+                <td>
+                  <span className="min-w-[60px]  text-sm animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                    Name Placeholder
+                  </span>
+                </td>
+                <td>
+                  <span className="min-w-[60px]  text-sm animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                    Name Placeholder
+                  </span>
+                </td>
+                <td>
+                  <span className="min-w-[60px]  text-sm animate-colorChange text-transparent  ml-2 rounded-2xl ">
+                    Name Placeholder
+                  </span>
+                </td>
+
+                <td
+                  style={{
+                    borderRight: "1px solid #e5e5e5",
+                  }}
+                >
                   <Image src={"/edit.png"} width={20} height={20} alt="edit" />
                   <Image src={"/doc.png"} width={20} height={20} alt="docs" />
                 </td>
               </tr>
             </>
-          ))}
+          )}
         </tbody>
       </table>
     </div>
