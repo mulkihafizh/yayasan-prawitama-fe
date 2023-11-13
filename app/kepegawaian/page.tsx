@@ -7,7 +7,7 @@ import JumlahPegawai from "../components/Kepegawaian/Pegawai-Kepegawaian/page";
 import ListPegawai from "../components/Kepegawaian/ListPegawai/page";
 import { getCookie } from "cookies-next";
 
-export default function page() {
+export default function Page() {
   const [data, setData] = useState([]);
 
   useEffect(() => {

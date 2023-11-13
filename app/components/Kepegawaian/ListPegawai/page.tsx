@@ -1,6 +1,7 @@
 import React from "react";
 import css from "./list.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function page({ Users }: any) {
   return (
@@ -12,8 +13,9 @@ export default function page({ Users }: any) {
           <div className="button-group grid grid-cols-2 gap-4">
             <button className="justify-self-end">Search</button>
             <button className="justify-self-end flex !items-center justify-center">
-              <Image src={"/export1.png"} width={50} height={50} alt="img" />
-              Export
+              <Link href={'/Form-employee'}>
+              Create
+              </Link>
             </button>
           </div>
         </div>
@@ -34,6 +36,7 @@ export default function page({ Users }: any) {
           Object.keys(Users).length > 0 ? (
             Users.map((user: any) => {
               return (
+                // eslint-disable-next-line react/jsx-key
                 <tr>
                   <td>{user.id_pegawai}</td>
                   <td>{user.name}</td>
