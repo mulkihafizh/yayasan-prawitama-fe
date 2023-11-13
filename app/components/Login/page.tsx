@@ -25,9 +25,9 @@ export default function Page() {
             path: "/",
           });
           if (data.user.role == "employee_admin") {
-            window.location.href = "/Dashboard-Kepegawaian";
+            window.location.href = "/kepegawaian";
           } else if (data.user.role == "payroll_admin") {
-            window.location.href = "/Dashboard-Keuangan";
+            window.location.href = "/keuangan";
           } else {
             window.location.href = "/Dashboard-Guru";
           }

@@ -9,7 +9,17 @@ export default function page() {
         <div className={css.title}>Dashboard</div>
         <div className={css.date}>
           <p>
-            <span>Monday</span>, 9 October 2023
+            <span>
+              {new Date().toLocaleDateString("id-ID", {
+                weekday: "long",
+              })}
+            </span>
+            ,{" "}
+            {new Date().toLocaleDateString("id-ID", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
           </p>
         </div>
       </div>
