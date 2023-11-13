@@ -10,21 +10,14 @@ Chart.register(CategoryScale);
 
 const ChartPage = () => {
   const [userData, setUserData] = useState({
-    labels: UserData.map((data) => data.Pegawaitetap),
+    labels: UserData.map((data) => data.jenis),
     datasets: [
       {
-        label: "Pegawai Tetap",
-        data: UserData.map((data) => data.Pegawaitetap),
+        label: "Pegawai",
+        data: UserData.map((data) => data.JumlahPegawai),
         tension: 0.3,
         fill: true,
-        backgroundColor: "rgba(117, 194, 246)",
-      },
-      {
-        label: "Pegawai Tidak Tetap",
-        data: UserData.map((data) => data.Pegawaitidaktetap),
-        tension: 0.3,
-        fill: true,
-        backgroundColor: "rgba(31, 128, 194)",
+        backgroundColor: ["rgb(117, 194, 246)", "rgb(255, 193, 54)"],
       },
     ],
   });
@@ -33,18 +26,16 @@ const ChartPage = () => {
       <div className={css.title}>Jumlah Karyawan</div>
       <div className={css.jumlahKaryawan}>
         <div className={css.presentase}>
-          <div className={css.box1}>
-            <div className={css.number}>
-              <div className={css.h1}>115</div>
+          {
+            UserData.map((data, index) => (
+              <div key={data.jenis} className={index == 0 ? css.box1 : css.box2}>
+              <div className={css.number}>
+                <div className={css.h1}>{data.JumlahPegawai}</div>
+              </div>
+              <div className={css.kt}>{data.jenis}</div>
             </div>
-            <div className={css.kt}>Karyawan Tetap</div>
-          </div>
-          <div className={css.box2}>
-            <div className={css.number}>
-              <div className={css.h1}>96</div>
-            </div>
-            <div className={css.kt}>Karyawan Tidak Tetap</div>
-          </div>
+            ))
+          }
         </div>
         <div className={css.chart}>
           <LineChart />

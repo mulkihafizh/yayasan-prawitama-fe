@@ -8,25 +8,18 @@ import UserData from "@/data/keuangan/page";
 
 function LineChart() {
   const [userData, setUserData] = useState({
-    labels: UserData.map((data) => data.Pegawaitetap),
+    labels: UserData.map((data) => data.jenis),
     datasets: [
       {
-        label: "Pegawai Tetap",
-        data: UserData.map((data) => data.Pegawaitetap),
+        label: "Pegawai",
+        data: UserData.map((data) => data.JumlahPegawai),
         tension: 0.3,
         fill: true,
-        backgroundColor: "rgb(117, 194, 246)",
-      },
-      {
-        label: "Pegawai Tidak Tetap",
-        data: UserData.map((data) => data.Pegawaitidaktetap),
-        tension: 0.3,
-        fill: true,
-        backgroundColor: "rgba(31, 128, 194.)",
+        backgroundColor: ["rgb(117, 194, 246)", "rgb(255, 193, 54)"],
       },
     ],
   });
-  return <Doughnut data={userData} />;
+  return <Doughnut data={userData} />;  
 }
 
 export default LineChart;

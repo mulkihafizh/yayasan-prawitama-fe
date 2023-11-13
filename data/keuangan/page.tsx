@@ -1,9 +1,11 @@
 const UserData = [
     {
-       Pegawaitetap: 50,
+       jenis: "Pegawai Tetap",
+       JumlahPegawai: 115,
     },
     {
-        Pegawaitidaktetap: 50,
+        jenis: "Pegawai Tidak Tetap",
+        JumlahPegawai: 96,
     },
 
 
