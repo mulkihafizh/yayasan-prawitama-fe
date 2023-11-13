@@ -6,13 +6,9 @@ export function middleware(request: NextRequest) {
     if (request.cookies.has("token")) {
       let role = request.cookies.get("role");
       if (role?.value === "payroll_admin") {
-        return NextResponse.redirect(
-          new URL("/Dashboard-Keuangan", request.url)
-        );
+        return NextResponse.redirect(new URL("/keuangan", request.url));
       } else if (role?.value === "employee_admin") {
-        return NextResponse.redirect(
-          new URL("/Dashboard-Kepegawaian", request.url)
-        );
+        return NextResponse.redirect(new URL("/kepegawaian", request.url));
       } else {
         return NextResponse.redirect(new URL("/Dashboard-Guru", request.url));
       }
@@ -22,13 +18,9 @@ export function middleware(request: NextRequest) {
     if (request.cookies.has("token")) {
       let role = request.cookies.get("role");
       if (role?.value === "payroll_admin") {
-        return NextResponse.redirect(
-          new URL("/Dashboard-Keuangan", request.url)
-        );
+        return NextResponse.redirect(new URL("/keuangan", request.url));
       } else if (role?.value === "employee_admin") {
-        return NextResponse.redirect(
-          new URL("/Dashboard-Kepegawaian", request.url)
-        );
+        return NextResponse.redirect(new URL("/kepegawaian", request.url));
       } else {
         return NextResponse.next();
       }
@@ -36,15 +28,13 @@ export function middleware(request: NextRequest) {
       return NextResponse.redirect(new URL("/", request.url));
     }
   }
-  if (request.nextUrl.pathname === "/Dashboard-Keuangan") {
+  if (request.nextUrl.pathname === "/keuangan") {
     if (request.cookies.has("token")) {
       let role = request.cookies.get("role");
       if (role?.value === "payroll_admin") {
         return NextResponse.next();
       } else if (role?.value === "employee_admin") {
-        return NextResponse.redirect(
-          new URL("/Dashboard-Kepegawaian", request.url)
-        );
+        return NextResponse.redirect(new URL("/kepegawaian", request.url));
       } else {
         return NextResponse.redirect(new URL("/Dashboard-Guru", request.url));
       }
@@ -52,13 +42,11 @@ export function middleware(request: NextRequest) {
       return NextResponse.redirect(new URL("/", request.url));
     }
   }
-  if (request.nextUrl.pathname === "/Dashboard-Kepegawaian") {
+  if (request.nextUrl.pathname === "/kepegawaian") {
     if (request.cookies.has("token")) {
       let role = request.cookies.get("role");
       if (role?.value === "payroll_admin") {
-        return NextResponse.redirect(
-          new URL("/Dashboard-Keuangan", request.url)
-        );
+        return NextResponse.redirect(new URL("/keuangan", request.url));
       } else if (role?.value === "employee_admin") {
         return NextResponse.next();
       } else {
