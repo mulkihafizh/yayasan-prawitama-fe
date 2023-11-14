@@ -1,31 +1,26 @@
 "use client";
 
 import React from "react";
-import { Line } from "react-chartjs-2";
+import { useState } from "react";
+import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 import UserData from "@/data/pegawai/page";
 
-function LineChart({ chartData }: any) {
-  const userData = {
-    labels: UserData.map((e) => e.month),
+function LineChart() {
+  const [userData, setUserData] = useState({
+    labels: UserData.map((data) => data.jenis),
     datasets: [
-      {
-        label: "Pegawai Tetap",
-        data: chartData?.map((e: any) => e.employment_type == "Permanent"),
+      {   
+        label: "Pegawai",
+        data: UserData.map((data) => data.JumlahPegawai),
         tension: 0.3,
         fill: true,
-        backgroundColor: "rgba(252, 214, 114, 0.8)",
-      },
-      {
-        label: "Pegawai Tidak Tetap",
-        data: chartData?.map((e: any) => e.employment_type == "Contract"),
-        tension: 0.3,
-        fill: true,
-        backgroundColor: "rgba(217, 157, 0, 0.9)",
+        backgroundColor: ["rgb(117, 194, 246)", "rgb(255, 193, 54)"],
       },
     ],
-  };
-  return <Line data={userData} />;
+  });
+  return <Doughnut data={userData} />;  
 }
+
 
 export default LineChart;
