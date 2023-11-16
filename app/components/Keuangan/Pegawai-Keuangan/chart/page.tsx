@@ -15,7 +15,7 @@ function LineChart() {
         data: UserData.map((data) => data.JumlahPegawai),
         tension: 0.3,
         fill: true,
-        backgroundColor: ["rgb(117, 194, 246)", "rgb(255, 193, 54)"],
+        backgroundColor: ["#0560fd", "rgb(255, 193, 54)"],
       },
     ],
   });
