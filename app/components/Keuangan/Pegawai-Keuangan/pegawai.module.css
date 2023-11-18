@@ -28,21 +28,19 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 35px;
   width: 100%;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 2rem;
   margin-top: 1rem;
+  transition: all ease-in-out 0.2s;
+  padding: 2rem;
 }
 
 .MainContainer .jumlahKaryawan .presentase {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
   gap: 54px;
-  max-width: 415px;
   width: 100%;
 }
 
@@ -54,6 +52,7 @@
     align-items: baseline;
     gap: 27px;
     width: 100%;
+    max-width: 415px;
     border-radius: 20px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background-image: url("/bg-box1.png");
@@ -93,6 +92,7 @@
     align-items: baseline;
     gap: 27px;
     width: 100%;
+    max-width: 415px;
     border-radius: 20px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background-image: url("/bg-box2.png");
@@ -127,6 +127,6 @@
 }
 
 .MainContainer .jumlahKaryawan .chart {
-  max-height: 440px;
+  max-height: 380px;
   padding: 1rem;
 }
