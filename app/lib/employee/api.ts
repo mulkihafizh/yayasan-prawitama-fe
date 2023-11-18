@@ -29,7 +29,11 @@ export const createEmployee = async (data: any) => {
     },
     body: JSON.stringify(data),
   });
-  return response.json();
+  const res = await response.json();
+  return {
+    status: response.status,
+    ...res,
+  };
 };
 
 export const editEmployee = async (data: any, id: string) => {
@@ -40,7 +44,11 @@ export const editEmployee = async (data: any, id: string) => {
     },
     body: JSON.stringify(data),
   });
-  return response.json();
+  const res = await response.json();
+  return {
+    status: response.status,
+    ...res,
+  };
 };
 
 export const deleteEmployee = async (id: string) => {
@@ -50,5 +58,9 @@ export const deleteEmployee = async (id: string) => {
       "Content-Type": "application/json",
     },
   });
-  return response.json();
+  const res = await response.json();
+  return {
+    status: response.status,
+    ...res,
+  };
 };

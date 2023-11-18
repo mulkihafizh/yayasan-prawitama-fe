@@ -6,10 +6,11 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "POST") {
-    const data = await JSON.parse(req.body);
+    const data = await req.body;
     const employee = await createEmployee(data);
-    if (employee.error) return res.status(500).json(employee);
-    return res.status(200).json(employee);
+    if (employee.status > 399)
+      return res.status(employee.status).json(employee);
+    return res.status(200).json(employee.data);
   } else {
     return res.status(405).json({ error: "Method not allowed" });
   }

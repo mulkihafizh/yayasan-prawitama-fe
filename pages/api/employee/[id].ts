@@ -1,11 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { getEmployee } from "@/app/lib/employee/api";
+import { getEmployee, deleteEmployee } from "@/app/lib/employee/api";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const employee = await getEmployee(req.query.id as string);
-  if (employee.error) return res.status(500).json(employee);
-  return res.status(200).json(employee);
+  if (req.method === "GET") {
+    const employee = await getEmployee(req.query.id as string);
+    if (employee.error) return res.status(500).json(employee);
+    return res.status(200).json(employee);
+  } else if (req.method === "DELETE") {
+    const employee = await deleteEmployee(req.query.id as string);
+    if (employee.error) return res.status(500).json(employee);
+    return res.status(200).json(employee);
+  } else {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
 }

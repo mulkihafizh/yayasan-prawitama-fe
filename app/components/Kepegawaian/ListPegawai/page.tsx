@@ -4,6 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function page({ Users }: any) {
+  const deleteData = (id: any) => {
+    const res = fetch(`/api/employee/${id}`, {
+      method: "DELETE",
+    });
+
+    console.log(res);
+  };
   return (
     <div className={css.MainContainer}>
       <div className={"max-md:!grid-cols-1 " + css.head}>
@@ -13,9 +20,7 @@ export default function page({ Users }: any) {
           <div className="button-group grid grid-cols-2 gap-4">
             <button className="justify-self-end">Search</button>
             <button className="justify-self-end flex !items-center justify-center">
-              <Link href={'/Form-employee'}>
-              Create
-              </Link>
+              <Link href={"/Form-employee"}>Create</Link>
             </button>
           </div>
         </div>
@@ -55,7 +60,16 @@ export default function page({ Users }: any) {
                       height={20}
                       alt="edit"
                     />
-                    <Image src={"/doc.png"} width={20} height={20} alt="docs" />
+                    <Image
+                      src={"/doc.png"}
+                      width={20}
+                      height={20}
+                      alt="docs"
+                      className="cursor-pointer"
+                      onClick={() => {
+                        deleteData(user._id);
+                      }}
+                    />
                   </td>
                 </tr>
               );
