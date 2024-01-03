@@ -64,3 +64,4 @@ export const deleteEmployee = async (id: string) => {
     ...res,
   };
 };
+
