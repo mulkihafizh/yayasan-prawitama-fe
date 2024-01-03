@@ -40,13 +40,8 @@ export default function page({ data }: any) {
       <div className={css.CardCuti}>
         <div className={"max-md:!gap-4 " + css.boxes}>
           <div className={css.box1}>
-            <Link href={"Form-Cuti"}>
+            <Link href={"pengajuan-cuti"}>
               <p className="max-md:!text-[12px]">Pengajuan Cuti</p>
-            </Link>
-          </div>
-          <div className={css.box2}>
-            <Link href={""}>
-              <p className="max-md:!text-[12px]">Penyetujuan Cuti</p>
             </Link>
           </div>
         </div>

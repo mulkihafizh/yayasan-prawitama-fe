@@ -22,6 +22,9 @@ const config: Config = {
       animation: {
         colorChange: "colorChange 1s linear infinite alternate",
       },
+      fontFamily: {
+        Poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],

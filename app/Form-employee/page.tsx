@@ -1,9 +1,13 @@
 "use client";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import css from "./employee.module.css";
+import Loading from "../components/Loading/page";
 
 export default function page() {
+  const [department, setDepartment] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+
   const [data, setData] = useState({
     address: {},
     children: [],
@@ -17,6 +21,17 @@ export default function page() {
   let pekerjaan = [];
   let anak = [];
   let education = [];
+  let departmentData = [];
+
+  useEffect(() => {
+    async function getDepartment() {
+      const res = await fetch("/api/department/get");
+      const data = await res.json();
+      setDepartment(data.data);
+      setLoading(false);
+    }
+    getDepartment();
+  }, []);
 
   const submitData = async () => {
     const res = await fetch("/api/employee/post", {
@@ -321,6 +336,21 @@ export default function page() {
     );
   }
 
+  for (let i = 0; i < department.length; i++) {
+    departmentData.push(
+      <option value={department[i]["details"]}>
+        {department[i]["details"]}
+      </option>
+    );
+  }
+
+  if (isLoading)
+    return (
+      <>
+        <Loading />
+      </>
+    );
+
   return (
     <>
       <div className={css.header}>
@@ -612,9 +642,7 @@ export default function page() {
                 <option value="" hidden selected>
                   Pilih Posisi
                 </option>
-                <option value="Kepala Program Keahlian PPLG">
-                  Kepala Program Keahlian PPLG
-                </option>
+                {departmentData}
               </select>
             </div>
             <div className={css.Label}>

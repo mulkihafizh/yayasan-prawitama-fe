@@ -2,7 +2,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_ENDPOINT as string;
 const path = "employee";
 
 export const getEmployees = async () => {
-  const response = await fetch(`${API_URL}${path}/employees`, {
+  const response = await fetch(`${API_URL}${path}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -12,7 +12,7 @@ export const getEmployees = async () => {
 };
 
 export const getEmployee = async (id: string) => {
-  const response = await fetch(`${API_URL}${path}/employees/${id}`, {
+  const response = await fetch(`${API_URL}${path}/${id}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -22,7 +22,7 @@ export const getEmployee = async (id: string) => {
 };
 
 export const createEmployee = async (data: any) => {
-  const response = await fetch(`${API_URL}${path}/employees`, {
+  const response = await fetch(`${API_URL}${path}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export const createEmployee = async (data: any) => {
 };
 
 export const editEmployee = async (data: any, id: string) => {
-  const response = await fetch(`${API_URL}${path}/employees/${id}`, {
+  const response = await fetch(`${API_URL}${path}/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export const editEmployee = async (data: any, id: string) => {
 };
 
 export const deleteEmployee = async (id: string) => {
-  const response = await fetch(`${API_URL}${path}/employees/${id}`, {
+  const response = await fetch(`${API_URL}${path}/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -65,3 +65,14 @@ export const deleteEmployee = async (id: string) => {
   };
 };
 
+export const getDepartment = async () => {
+  const response = await fetch(`${API_URL}department`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  
+  return response.json();
+};
