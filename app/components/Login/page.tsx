@@ -8,6 +8,8 @@ import { setCookie } from "cookies-next";
 export default function page() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false); // State untuk nentuin pass di tampilin apa engga
+
 
   const login = async () => {
     await fetch("/api/user/login", {
@@ -74,8 +76,8 @@ export default function page() {
             <div className={css.label}>
               <Image
                 src={"/input-icon.png"}
-                width={21}
-                height={23}
+                width={18}
+                height={18}
                 alt="img"
                 style={{ position: "absolute", left: "20px", top: "15px" }}
               />
@@ -87,20 +89,29 @@ export default function page() {
               />
             </div>
             <div className={css.label}>
+            <div className={css.inputContainer}>
               <Image
-                src={"/input-icon2.png"}
-                width={24}
-                height={22}
-                alt="img"
-                style={{ position: "absolute", left: "20px", top: "22px" }}
-              />
-              <input
-                onChange={(e) => setPassword(e.target.value)}
-                type="password"
-                name=""
-                placeholder="enter your password"
-              />
-            </div>
+            src={"/input-icon2.png"}
+            width={20}
+            height={20}
+            alt="img"
+            style={{ position: "absolute", left: "20px", top: "22px" }}
+          />
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            type={showPassword ? "text" : "password"}
+            name=""
+            placeholder="Enter your password"
+          />
+          <div className={css.eyeIcon} onClick={() => setShowPassword(!showPassword)}>
+            {showPassword ? (
+              <Image src={"/eye-open.svg"} width={24} height={22} alt="eye-open" />
+            ) : (
+              <Image src={"/eye-close.svg"} width={24} height={22} alt="eye-close" />
+            )}
+          </div>
+        </div>
+      </div>
             <div className={css.button}>
               <button type="submit" onClick={login}>
                 Login

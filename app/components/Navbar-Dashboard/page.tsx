@@ -15,7 +15,7 @@ export default function page() {
       </div>
       <div className={css.notif}>
         <Image src={"/notif.png"} width={27} height={27} alt="notif" />
-        <Image src={"/set.png"} width={25} height={25} alt="notif" />
+        <Image src={"/logout.png"} width={25} height={25} alt="notif" />
       </div>
     </div>
   );

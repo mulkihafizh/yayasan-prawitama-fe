@@ -202,3 +202,34 @@
   line-height: normal;
   padding: 10px 10px;
 }
+
+/* ... (CSS yang ada sebelumnya) */
+
+.Parent .right .form .label {
+  position: relative;
+  width: 100%;
+}
+
+.Parent .right .form .inputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.Parent .right .form input {
+  width: calc(100% - 55px);
+  max-width: 100%;
+  height: 60px;
+  border-radius: 20px;
+  background: #ececec;
+  padding: 0 0 0 55px;
+}
+
+.Parent .right .form .eyeIcon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+
