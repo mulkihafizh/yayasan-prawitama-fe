@@ -63,8 +63,15 @@ export default function page() {
     <div className="bg-[#F4F4F4] w-screen min-h-screen pb-8">
       <Navbar />
       <div className=" w-screen grid grid-cols-12 px-[76px] gap-20">
-        <Main data={data} target={targetCuti} cuti={cuti} />
-        <History cuti={cuti} />
+        {data != null && data != undefined && Object.keys(data).length > 0 ? (
+          <>
+            {" "}
+            <Main data={data} target={targetCuti} cuti={cuti} />
+            <History cuti={cuti} />{" "}
+          </>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
