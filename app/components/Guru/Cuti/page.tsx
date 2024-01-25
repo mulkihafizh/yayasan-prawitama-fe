@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import css from "./cuti.module.css";
 import Image from "next/image";
