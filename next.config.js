@@ -13,6 +13,9 @@ const nextConfig = {
 
     ignoreBuildErrors: true,
   },
+  exportPathMap: async function () {
+    return {};
+  },
 };
 
 module.exports = nextConfig;
