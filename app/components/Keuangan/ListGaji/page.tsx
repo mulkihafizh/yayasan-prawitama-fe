@@ -21,23 +21,33 @@ export default function page({ data }: { data: any }) {
               <th>Jabatan</th>
               <th>Gaji</th>
             </tr>
-            {data.map((i: any, index: number) => (
-              <>
-                <tr>
-                  <td>{i.id_pegawai}</td>
-                  <td>{i.name}</td>
-                  <td>{i.employment_type}</td>
-                  <td>{i.department.details}</td>
-                  <td>
-                    {" "}
-                    {Intl.NumberFormat("id-ID", {
-                      style: "currency",
-                      currency: "IDR",
-                    }).format(i.department.salary * i.attendance.total)}
-                  </td>
-                </tr>
-              </>
-            ))}
+            {data !== null &&
+            data !== undefined &&
+            Object.keys(data).length > 0 ? (
+              data.map((i: any, index: number) => (
+                <>
+                  <tr>
+                    <td>{i.id_pegawai}</td>
+                    <td>{i.name}</td>
+                    <td>{i.employment_type}</td>
+                    <td>{i.department.details}</td>
+                    <td>
+                      {" "}
+                      {Intl.NumberFormat("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      }).format(i.department.salary * i.attendance.total)}
+                    </td>
+                  </tr>
+                </>
+              ))
+            ) : (
+              <tr>
+                <td colSpan={5} className=" text-center break-words">
+                  <h4 className="text-xl font-bold break-words">-</h4>
+                </td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>

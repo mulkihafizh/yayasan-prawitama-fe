@@ -24,7 +24,9 @@ export default function page({ data }: { data: any }) {
           </tr>
         </thead>
         <tbody>
-          {data.education_history.length > 0 ? (
+          {data !== null &&
+          data !== undefined &&
+          Object.keys(data.education_history).length > 0 ? (
             data.map((e: any, index: Number) => (
               <>
                 <tr>

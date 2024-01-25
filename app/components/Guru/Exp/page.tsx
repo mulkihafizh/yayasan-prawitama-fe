@@ -23,7 +23,9 @@ export default function page({ data }: { data: any }) {
               <th>Aksi</th>
             </tr>
           </thead>
-          {data.work_history.length > 0 ? (
+          {data !== null &&
+          data !== undefined &&
+          Object.keys(data.work_history).length ? (
             data.work_history.map((e: any, index: Number) => (
               <>
                 <tr>
