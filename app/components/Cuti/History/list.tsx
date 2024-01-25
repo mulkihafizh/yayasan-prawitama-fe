@@ -2,10 +2,9 @@ import React from "react";
 import Image from "next/image";
 
 export default function list({ cuti }: { cuti: any }) {
-  console.log(cuti);
   return (
     <div className="flex flex-col gap-5 px-8">
-      {cuti.length > 0 ? (
+      {Object.keys(cuti).length > 0 ? (
         cuti.map((i: any, index: number) => {
           return (
             <div
