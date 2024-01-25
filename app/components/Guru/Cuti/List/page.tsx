@@ -18,7 +18,7 @@ export default function page({ cuti }: any) {
           </tr>
         </thead>
         <tbody className={css.tbody}>
-          {cuti.length > 0 ? (
+          {cuti != null && cuti != undefined && Object.keys(cuti).length > 0 ? (
             cuti.map((i: any, index: number) => {
               return (
                 <tr>

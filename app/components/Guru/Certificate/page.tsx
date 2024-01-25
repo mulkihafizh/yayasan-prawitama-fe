@@ -24,13 +24,13 @@ export default function page({ data }: { data: any }) {
           </tr>
         </thead>
         <tbody>
-          {data.length > 0 ? (
+          {data != null && data != undefined && Object.keys(data).length > 0 ? (
             data.map((i: any, index: any) => (
               <tr>
-                <td>{data.Bidang}</td>
-                <td>{data.Ts}</td>
-                <td>{data.Ns}</td>
-                <td>{data.Np}</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
                 <td>
                   <Link href={"/#"}>Sertifikasi Perangkat Lunak</Link>
                 </td>
