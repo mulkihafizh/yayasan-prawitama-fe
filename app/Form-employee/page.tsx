@@ -338,9 +338,7 @@ export default function page() {
 
   for (let i = 0; i < department.length; i++) {
     departmentData.push(
-      <option value={department[i]["details"]}>
-        {department[i]["details"]}
-      </option>
+      <option value={department[i]["_id"]}>{department[i]["details"]}</option>
     );
   }
 

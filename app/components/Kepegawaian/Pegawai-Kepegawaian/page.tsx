@@ -58,7 +58,7 @@ const ChartPage = ({ data }: any) => {
         </div>
         <div className={css.chart}>
           {data != null && data != undefined && Object.keys(data).length > 0 ? (
-            <LineChart chartData={data} />
+            <LineChart />
           ) : (
             <span className="min-w-[60px]  text-xl animate-colorChange text-transparent   rounded-2xl ">
               Name Placeholder

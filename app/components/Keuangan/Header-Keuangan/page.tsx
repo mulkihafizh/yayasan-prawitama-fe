@@ -12,9 +12,9 @@ export default function page() {
           </div>
           <div className={css.desc}>
             <p className="max-[600px]:!text-xs">
-            Selamat datang di laporan Keuangan ! Di sini, 
-            Anda dapat melihat rincian lengkap mengenai Pendapatan, 
-            Tunjangan, dan Benefit karyawan.
+              Selamat datang di laporan Keuangan ! Di sini, Anda dapat melihat
+              rincian lengkap mengenai Pendapatan, Tunjangan, dan Benefit
+              karyawan.
             </p>
           </div>
         </div>
@@ -24,6 +24,7 @@ export default function page() {
             width={530}
             height={380}
             alt="img"
+            className="z-50"
             style={{
               position: "absolute",
               left: 0,

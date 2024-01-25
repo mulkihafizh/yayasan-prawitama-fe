@@ -1,10 +1,9 @@
 import React from "react";
 import css from "./certi.module.css";
 import Image from "next/image";
-import Data from '../../../../data/certificate/page'
 import Link from "next/link";
 
-export default function page() {
+export default function page({ data }: { data: any }) {
   return (
     <div className={css.Container}>
       <h1>Sertifikat</h1>
@@ -15,34 +14,41 @@ export default function page() {
         </button>
       </div>
       <table>
-        <tbody>
-          {Data.map((data, index) => (
-            <>
+        <thead>
           <tr>
             <th>Bidang Studi</th>
             <th>Tanggal Sertifikasi</th>
-            <th>Nomor Sertifikat</th>
-            <th>Nomor Peserta</th>
-            <th>Tanggal Lulus</th> 
+            <th>Dikeluarkan Oleh</th>
+            <th>Waktu Berlaku</th>
             <th>Bukti</th>
           </tr>
-          <tr>
-            <td>{data.Bidang}</td>
-            <td>{data.Ts}</td>
-            <td>{data.Ns}</td>
-            <td>{data.Np}</td>
-            <td><Link href={'/#'}>Sertifikasi Perangkat Lunak</Link></td>
-            <td>
-              <Image
-              src={'/edit2.png'}
-              width={20}
-              height={10}
-              alt="edit"
-              />
-            </td>
-          </tr>
-            </>
-          ))}
+        </thead>
+        <tbody>
+          {data.length > 0 ? (
+            data.map((i: any, index: any) => (
+              <tr>
+                <td>{data.Bidang}</td>
+                <td>{data.Ts}</td>
+                <td>{data.Ns}</td>
+                <td>{data.Np}</td>
+                <td>
+                  <Link href={"/#"}>Sertifikasi Perangkat Lunak</Link>
+                </td>
+                <td>
+                  <Image src={"/edit2.png"} width={20} height={10} alt="edit" />
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td
+                className="!text-center !justify-center !text-xl !py-8"
+                colSpan={5}
+              >
+                Belum ada data
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>

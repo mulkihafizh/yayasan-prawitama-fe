@@ -8,21 +8,19 @@ export default function page({ Users }: any) {
     const res = fetch(`/api/employee/${id}`, {
       method: "DELETE",
     });
-
-    console.log(res);
   };
   return (
     <div className={css.MainContainer}>
       <div className={"max-md:!grid-cols-1 " + css.head}>
         <div className={css.title}>List Karyawan</div>
         <div className={" md:col-span-2 grid grid-cols-3 " + css.buttons}>
-          <input type="search" className="col-span-2 px-5" />
+          {/* <input type="search" className="col-span-2 px-5" />
           <div className="button-group grid grid-cols-2 gap-4">
             <button className="justify-self-end">Search</button>
             <button className="justify-self-end flex !items-center justify-center">
               <Link href={"/Form-employee"}>Create</Link>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
       <table>
@@ -46,7 +44,7 @@ export default function page({ Users }: any) {
                   <td>{user.id_pegawai}</td>
                   <td>{user.name}</td>
                   <td>{user.department.name}</td>
-                  <td>{user.department.description}</td>
+                  <td>{user.department.details}</td>
                   <td>{user.days_off}</td>
                   <td>{user.tenggat || "-"}</td>
                   <td

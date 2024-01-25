@@ -38,13 +38,14 @@ export const getCutiById = async (id: string) => {
   return response.json();
 };
 
-export const approveCuti = async (id: string) => {
+export const approveCuti = async (id: string, status: string) => {
   const response = await fetch(`${API_URL}${path}/approve/${id}`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
     },
+    body: JSON.stringify({ status }),
   });
 
   return response.json();
@@ -62,7 +63,7 @@ export const rejectCuti = async (id: string) => {
   return response.json();
 };
 
-export const createCuti = async (data: any) => {
+export const createCuti = async (data: any, token: any) => {
   const response = await fetch(`${API_URL}${path}`, {
     method: "POST",
     headers: {
@@ -90,6 +91,18 @@ export const approveCutiAdmin = async (id: string) => {
 export const deleteCuti = async (id: string) => {
   const response = await fetch(`${API_URL}${path}/${id}`, {
     method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+  });
+
+  return response.json();
+};
+
+export const getUserCuti = async (id: string) => {
+  const response = await fetch(`${API_URL}${path}/user/${id}`, {
+    method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",

@@ -1,5 +1,6 @@
 const API_URL = process.env.NEXT_PUBLIC_API_ENDPOINT as string;
 const path = "employee";
+import { getCookie } from "cookies-next";
 
 export const getEmployees = async () => {
   const response = await fetch(`${API_URL}${path}`, {
@@ -73,6 +74,33 @@ export const getDepartment = async () => {
     },
   });
 
-  
   return response.json();
+};
+
+export const getEmployeeRole = async (token: any) => {
+  const response = await fetch(`${API_URL}${path}/${path}s/role`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    },
+  });
+
+  return response.json();
+};
+
+export const attendence = async (data: any) => {
+  const response = await fetch(`http://localhost:8000/employee/attendance`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  const res = await response.json();
+  return {
+    status: response.status,
+    ...res,
+  };
 };

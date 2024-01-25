@@ -7,9 +7,20 @@ import Cuti from "../components/Guru/Cuti/page";
 import Biodata from "../components/Guru/Biodata/page";
 import { getCookie } from "cookies-next";
 import Loading from "../components/Loading/page";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import {
+  faArrowRightFromBracket,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(faArrowRightFromBracket, faXmark);
+config.autoAddCss = false;
 
 export default function page() {
   const [data, setData] = useState([]);
+  const [certificate, setCertificate] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -20,7 +31,16 @@ export default function page() {
     }).then((res) => {
       res.json().then((data) => {
         setData(data.employee);
-        setLoading(false);
+        fetch("/api/certificate/user/" + data.employee._id, {
+          headers: {
+            Authorization: "Bearer " + getCookie("token"),
+          },
+        }).then((res) => {
+          res.json().then((data) => {
+            setCertificate(data.data);
+            setLoading(false);
+          });
+        });
       });
     });
   }, [getCookie]);
@@ -38,7 +58,7 @@ export default function page() {
       <Navbar />
       <Header data={data} />
       <Cuti data={data} />
-      <Biodata data={data} />
+      <Biodata data={data} certi={certificate} />
     </div>
   );
 }

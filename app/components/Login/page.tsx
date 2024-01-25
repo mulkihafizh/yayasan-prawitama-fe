@@ -8,12 +8,16 @@ import { setCookie } from "cookies-next";
 export default function Page() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isDisabled, setIsDisabled] = useState(false);
 
-  const login = async () => {
+  const login = async (context: any) => {
+    context.preventDefault();
+    setIsDisabled(true);
     await fetch("/api/user/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
     }).then((res) => {
+      setIsDisabled(false);
       if (res.ok) {
         res.json().then((data) => {
           setCookie("token", data.token, {
@@ -29,7 +33,7 @@ export default function Page() {
           } else if (data.user.role == "payroll_admin") {
             window.location.href = "/keuangan";
           } else {
-            window.location.href = "/Dashboard-Guru";
+            window.location.href = "/dashboard-guru";
           }
         });
       } else {
@@ -102,7 +106,12 @@ export default function Page() {
               />
             </div>
             <div className={css.button}>
-              <button type="submit" onClick={login}>
+              <button
+                disabled={isDisabled}
+                type="submit"
+                onClick={login}
+                className=" disabled:bg-yellow-600"
+              >
                 Login
               </button>
             </div>

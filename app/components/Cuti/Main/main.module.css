@@ -1,0 +1,12 @@
+.container {
+  background-image: url("/bgcuti.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tbody:before {
+  content: "@";
+  display: block;
+  line-height: 20px;
+  text-indent: -99999px;
+}

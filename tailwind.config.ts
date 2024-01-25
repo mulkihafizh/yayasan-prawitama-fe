@@ -18,9 +18,14 @@ const config: Config = {
           "0%": { backgroundColor: "rgba(128,128,128, 0.30)" },
           "100%": { backgroundColor: "rgba(255,255,255, 0.10)" },
         },
+        loading: {
+          "0%, 100%": { top: "-5px" },
+          "50%": { top: "0px" },
+        },
       },
       animation: {
         colorChange: "colorChange 1s linear infinite alternate",
+        loading: "loading 1.5s ease-in-out infinite",
       },
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],

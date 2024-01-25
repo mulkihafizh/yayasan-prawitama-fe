@@ -26,16 +26,14 @@ const ChartPage = () => {
       <div className={css.title}>Jumlah Karyawan</div>
       <div className={css.jumlahKaryawan}>
         <div className={css.presentase}>
-          {
-            UserData.map((data, index) => (
-              <div key={data.jenis} className={index == 0 ? css.box1 : css.box2}>
+          {UserData.map((data, index) => (
+            <div key={data.jenis} className={index == 0 ? css.box1 : css.box2}>
               <div className={css.number}>
-                <div className={css.h1}>{data.JumlahPegawai}</div>
+                <div className={"!text-lg " + css.h1}>{index == 0 ? 2 : 0}</div>
               </div>
-              <div className={css.kt}>{data.jenis}</div>
+              <div className={"!text-lg " + css.kt}>{data.jenis}</div>
             </div>
-            ))
-          }
+          ))}
         </div>
         <div className={css.chart}>
           <LineChart />

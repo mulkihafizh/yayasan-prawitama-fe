@@ -1,9 +1,8 @@
 import React from "react";
 import css from "./exp.module.css";
 import Image from "next/image";
-import Data from '../../../../data/exp/page'
 
-export default function page() {
+export default function page({ data }: { data: any }) {
   return (
     <div className={css.Container}>
       <h1>Pengalaman</h1>
@@ -15,31 +14,44 @@ export default function page() {
       </div>
       <table>
         <tbody>
-          {Data.map((data, index) => (
-            <>
-          <tr>
-            <th>Instansi</th>
-            <th>Posisi</th>
-            <th>Tanggal Mulai</th>
-            <th>Tanggal Selesai</th>
-            <th>Aksi</th>
-          </tr>
-          <tr>
-            <td>{data.Instansi}</td>
-            <td>{data.Posisi}</td>
-            <td>{data.Tm}</td>
-            <td>{data.Ts}</td>
-            <td>
-              <Image
-              src={'/edit2.png'}
-              width={20}
-              height={10}
-              alt="edit"
-              />
-            </td>
-          </tr>
-            </>
-          ))}
+          <thead>
+            <tr>
+              <th>Instansi</th>
+              <th>Posisi</th>
+              <th>Tanggal Mulai</th>
+              <th>Tanggal Selesai</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          {data.work_history.length > 0 ? (
+            data.work_history.map((e: any, index: Number) => (
+              <>
+                <tr>
+                  <td>{data.company_name}</td>
+                  <td>{data.position}</td>
+                  <td>{data.start_date}</td>
+                  <td>{data.end_date}</td>
+                  <td>
+                    <Image
+                      src={"/edit2.png"}
+                      width={20}
+                      height={10}
+                      alt="edit"
+                    />
+                  </td>
+                </tr>
+              </>
+            ))
+          ) : (
+            <tr>
+              <td
+                className="text-center !justify-center text-xl !py-8"
+                colSpan={5}
+              >
+                Belum ada data
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>
