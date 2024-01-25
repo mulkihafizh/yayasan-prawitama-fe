@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Modal from "./Modal/page";
 
-export default function page({ data }: any) {
+export default function page({ data, payroll }: { data: any; payroll: any }) {
   const [modal, setModal] = useState(false);
   const periode = `25 ${new Date(
     new Date().setMonth(new Date().getMonth() - 1)
@@ -21,7 +21,6 @@ export default function page({ data }: any) {
   const onClose = () => {
     setModal(false);
   };
-
 
   return (
     <div className={"max-lg:!gap-8 max-lg:!grid-cols-1 " + css.Parent}>
@@ -63,7 +62,9 @@ export default function page({ data }: any) {
           </h2>
           <div className={css.detail}>
             <Image src={"/print.png"} width={38} height={38} alt="print" />
-            <button>Lihat Detail</button>
+            <Link href={`/dashboard-guru/gaji/${payroll[0]._id}`}>
+              <button>Lihat Detail</button>
+            </Link>
           </div>
         </div>
       </div>

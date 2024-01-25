@@ -21,6 +21,7 @@ config.autoAddCss = false;
 export default function page() {
   const [data, setData] = useState([]);
   const [certificate, setCertificate] = useState([]);
+  const [payroll, setPayroll] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -29,16 +30,25 @@ export default function page() {
         Authorization: "Bearer " + getCookie("token"),
       },
     }).then((res) => {
-      res.json().then((data) => {
-        setData(data.employee);
-        fetch("/api/certificate/user/" + data.employee._id, {
+      res.json().then((a) => {
+        setData(a.employee);
+        fetch("/api/certificate/user/" + a.employee._id, {
           headers: {
             Authorization: "Bearer " + getCookie("token"),
           },
         }).then((res) => {
-          res.json().then((data) => {
-            setCertificate(data.data);
-            setLoading(false);
+          res.json().then((i) => {
+            setCertificate(i.data);
+            fetch("/api/payroll/user/" + a.employee._id, {
+              headers: {
+                Authorization: "Bearer " + getCookie("token"),
+              },
+            }).then((res) => {
+              res.json().then((c) => {
+                setPayroll(c.payroll);
+                setLoading(false);
+              });
+            });
           });
         });
       });
@@ -57,7 +67,7 @@ export default function page() {
     <div className="DK">
       <Navbar />
       <Header data={data} />
-      <Cuti data={data} />
+      <Cuti data={data} payroll={payroll} />
       <Biodata data={data} certi={certificate} />
     </div>
   );

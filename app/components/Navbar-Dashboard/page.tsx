@@ -33,7 +33,7 @@ export default function page() {
 
   function logoutElement() {
     return (
-      <div className="absolute top-0 right-0 p-4 rounded-xl  bg-white z-50">
+      <div className="absolute top-0 right-0 p-4 rounded-xl  bg-white z-[999]">
         <div className="flex flex-col items-center justify-center h-full"></div>
         <div className="text-xl font-bold text-gray-800">Are you sure?</div>
         <div className="flex gap-3 mt-4">
@@ -66,7 +66,7 @@ export default function page() {
             {new Date().toLocaleDateString("id-ID", {
               day: "numeric",
               month: "long",
-            year: "numeric",
+              year: "numeric",
             })}
           </p>
         </div>
