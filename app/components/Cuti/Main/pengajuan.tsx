@@ -45,7 +45,9 @@ export default function pengajuan({ target }: { target: any }) {
           </tr>
         </thead>
         <tbody className={css.tbody}>
-          {target.length > 0 ? (
+          {target != null &&
+          target != undefined &&
+          Object.keys(target).length > 0 ? (
             target.map((i: any, index: number) => {
               return (
                 <tr>
