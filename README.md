@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>Yayasan Prawitama</h1>
+<p>
+  Platform untuk mengelola data yayasan, khususnya terkait dengan guru dan staf.
+</p>
+<hr />
+<h2>Halaman Login</h2>
 
-## Getting Started
+![Screenshot 2024-03-05 094729](https://github.com/mulkihafizh/yayasan-prawitama-fe/assets/91298960/767d5b17-d49e-4e2b-b8e3-23bc4523a8f7)
+<hr />
+<h2>Halaman Dashboard Admin Kepegawaian</h2>
+<h3>Dashboard</h3>
 
-First, run the development server:
+![Screenshot 2024-03-05 095800](https://github.com/mulkihafizh/yayasan-prawitama-fe/assets/91298960/8c56d631-77af-477f-8561-1d961f3f2e3f)
+![Screenshot 2024-04-25 124305](https://github.com/mulkihafizh/yayasan-prawitama-fe/assets/91298960/c2021715-bdbb-4db3-bc89-64139429656b)
+<p>Menampilkan data pribadi karyawan.</p>
+<hr/>
+<h2>Halaman Dashboard Admin Keuangan</h2>
+<h3>Dashboard</h3>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Screenshot 2024-03-05 095440](https://github.com/mulkihafizh/yayasan-prawitama-fe/assets/91298960/670539e8-66d1-4a5e-9ee2-df63aae8c9fc)
+![Screenshot 2024-04-25 123710](https://github.com/mulkihafizh/yayasan-prawitama-fe/assets/91298960/ae2b024e-9c48-4ef4-9ea9-c6f42efc3911)
+<p>Menampilkan data jumlah gaji bulanan karyawan.</p>
+<hr/>
+<h2>Halaman Dashboard Guru/Staf (Karyawan)</h2>
+<h3>Dashboard</h3>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Screenshot 2024-04-25 094859](https://github.com/mulkihafizh/yayasan-prawitama-fe/assets/91298960/b0042faf-4d24-4f85-9a73-a1aa2c40c53b)
+![Screenshot 2024-04-25 094953](https://github.com/mulkihafizh/yayasan-prawitama-fe/assets/91298960/5a732c92-cb5b-42d9-8071-d890c0edb579)
+<p>Menampilkan data diri dan gaji pribadi.</p>
+<h3>Detail Gaji Karyawan</h3>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Screenshot 2024-04-25 095108](https://github.com/mulkihafizh/yayasan-prawitama-fe/assets/91298960/28d6481b-9c65-4139-9f0f-4b5287308bc1)
+<p>Menampilkan detail gaji pada periode tertentu.</p>
+<h3>History Cuti dan Pengajuan</h3>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![Screenshot 2024-04-25 123918](https://github.com/mulkihafizh/yayasan-prawitama-fe/assets/91298960/f531f292-f204-4051-afc2-8160c4bf70ad)
+<p>Menampilkan data pengajuan cuti terhadap karyawan dan cuti lawas.</p>
 
-## Learn More
+![Screenshot 2024-04-25 123942](https://github.com/mulkihafizh/yayasan-prawitama-fe/assets/91298960/1b2bfe05-1eee-4585-a769-02492bd781b8)
+<p>Formulir pengajuan cuti karyawan terhadap karyawan lain.</p>
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
